@@ -1,4 +1,4 @@
 <?php
-phpinfo();
+echo "<strong>Hello bangladesh</strong>";
 
 ?>
