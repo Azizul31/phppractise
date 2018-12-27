@@ -1,2 +1,5 @@
+
 <?php
-echo '<input type="text" name="name" value="Azizul">';
+$text="Azizul Hakim";
+?>
+<input type="text" name="name" value="<?php echo $text;?>">
