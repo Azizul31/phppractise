@@ -1,4 +1,3 @@
 <?php
-echo "<strong>Hello bangladesh</strong>";
+echo '<input type="text" name="name" value="Azizul">';
 
-?>
