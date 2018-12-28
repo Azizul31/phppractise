@@ -1,9 +1,8 @@
 <?php
-/* comparison operation */
+/* while loop operation*/
 $var1='1';
-$var2=1;
-if($var2===$var1)
+while($var1<=10)
 {
-    echo "ok";
+    echo $var1." hello<br> ";
+    $var1++;
 }
-else echo "Not ok";
