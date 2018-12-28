@@ -1,9 +1,7 @@
 <?php
-/* do while loop operation*/
-$var1='1';
-do
-{
-    echo $var1." hello<br> ";
-    $var1++;
-}
-while($var1<3);
+/* for loop operation*/
+
+for($i=1;$i<21;$i++)
+    {
+        echo $i."<br>";
+    }
