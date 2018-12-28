@@ -1,6 +1,7 @@
-
 <?php
-$var1="Azizul";
-$var2=21567;
-echo $var1.'s salary is'.$var2
-?>
+/* if else statement */
+if (0)
+{
+    echo "Hello people";
+}
+else echo "Hello Bangladesh";
