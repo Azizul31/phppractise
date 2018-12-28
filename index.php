@@ -1,7 +1,12 @@
 <?php
-/* for loop operation*/
-
-for($i=1;$i<21;$i++)
-    {
-        echo $i."<br>";
-    }
+/* switch loop operation*/
+$var="friday";
+switch($var)
+{
+    case "friday":
+    case "saturday":
+        echo "It is weekend";
+        break;
+    default:
+        echo "It is working day";
+}
