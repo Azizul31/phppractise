@@ -1,12 +1,8 @@
 <?php
-/* switch loop operation*/
-$var="friday";
-switch($var)
+/*welcome to function*/
+function myName($name)
 {
-    case "friday":
-    case "saturday":
-        echo "It is weekend";
-        break;
-    default:
-        echo "It is working day";
+    echo($name);
 }
+echo "My name is ";
+myName("azizul");
