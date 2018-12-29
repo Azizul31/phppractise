@@ -1,9 +1,4 @@
 <?php
-/*welcome to function*/
-$num1=10;$num2=11;
-function addResult()
-{   global $num1,$num2;
-    $num3=$num1+$num2;
-    return $num3;
-}
-echo addResult();
+$string="I am Azizul .";
+$string_word_count=str_word_count($string,1,'.');
+print_r($string_word_count);
