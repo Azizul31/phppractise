@@ -1,3 +1,3 @@
 <?php
-$arr=array("apple"=>200,"orange"=>215,"lemon"=>567);
-echo $arr["apple"];
+$arr=array(0=>array("chicken","beef","mutton"),1=>array("tomato","carrot"));
+echo $arr[0][1];
