@@ -1,4 +1,13 @@
 <?php
-include_once "header.inc.php";
-include 'header.inc.php';
-echo "I am azizul and my favourite dish is ".$var1." and my favourite sports is ".$var2;
+$string="Hellohavesomefood!";
+function has_space($string)
+{
+    if (preg_match('/ /', $string)) {
+        return true;
+    } else return false;
+}
+if(has_space($string))
+{
+    echo "Have space.";
+}
+else echo "No space";
