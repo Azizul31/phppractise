@@ -1,3 +1,10 @@
 <?php
-$arr=array(0=>array("chicken","beef","mutton"),1=>array("tomato","carrot"));
-echo $arr[0][1];
+$arr=array("meat"=>array("chicken","beef","mutton"),"vegetable"=>array("tomato","carrot"));
+foreach ($arr as $meat=>$veg)
+{
+    echo "<strong>".$meat."</strong><br>";
+    foreach ($veg as $vegetable)
+    {
+        echo $vegetable."<br>";
+    }
+}
