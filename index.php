@@ -1,10 +1,3 @@
 <?php
-$arr=array("meat"=>array("chicken","beef","mutton"),"vegetable"=>array("tomato","carrot"));
-foreach ($arr as $meat=>$veg)
-{
-    echo "<strong>".$meat."</strong><br>";
-    foreach ($veg as $vegetable)
-    {
-        echo $vegetable."<br>";
-    }
-}
+include 'headers.inc.php';
+echo "I am azizul and my favourite dish is ".$var1." and my favourite sports is ".$var2;
