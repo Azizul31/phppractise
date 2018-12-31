@@ -1,5 +1,5 @@
 <?php
-$string="Hellohavesomefood!";
+$string="Hello havesomefood!";
 function has_space($string)
 {
     if (preg_match('/ /', $string)) {
