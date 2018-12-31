@@ -1,15 +1,11 @@
 <?php
-if(isset($_GET['user_name']) && !empty($_GET['user_name']))
+$string="I am Azizul hakim.I am a student.I am feeling good today";
+$find="am";
+$i=0;
+$find_length=strlen($find);
+while($pos=strpos($string,$find,$i))
 {
-    $user_name=$_GET['user_name'];
-    $user_name_lc=strtolower($user_name);
-    if($user_name_lc=='azizul')
-    {
-        echo "You are the best  " .$user_name;
-    }
+
+    echo $pos."<br>";
+    $i=$pos+$find_length;
 }
-?>
-<form action="index.php" method="GET">
-    Name:<input type="text" name="user_name"><br>
-    <input type="submit" value="Submit">
-</form>
