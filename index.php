@@ -1,14 +1,15 @@
 <?php
-/* preg_match */
-$string="Hello havesomefoods!";
-function has_space($string)
+if(isset($_GET['user_name']) && !empty($_GET['user_name']))
 {
-    if (preg_match('/ /', $string)) {
-        return true;
-    } else return false;
+    $user_name=$_GET['user_name'];
+    $user_name_lc=strtolower($user_name);
+    if($user_name_lc=='azizul')
+    {
+        echo "You are the best  " .$user_name;
+    }
 }
-if(has_space($string))
-{
-    echo "Have space.";
-}
-else echo "No space";
+?>
+<form action="index.php" method="GET">
+    Name:<input type="text" name="user_name"><br>
+    <input type="submit" value="Submit">
+</form>
