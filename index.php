@@ -1,15 +1,17 @@
+
 <?php
-/*substr_replace() function*/
-$string="I am Azizul hakim.I am a student.I am feeling good today";
-$new_string=substr_replace($string,'Rabbis',5,6);
-echo $new_string."<br>";
-/*Output: I am Rabbis hakim.I am a student.I am feeling good today*/
+//str_ireplace   function
+if(isset( $_POST['user_input'])&& !empty($_POST['user_input']))
+{
+    $find=array('azizul','ashik','amit');
+    $replace=array('a***l','a***k','a***t');
+    $user_input=$_POST['user_input'];
+    echo $new_user_input=str_ireplace($find,$replace,$user_input);
 
-/*str_replace() function*/
-$string2="I am Azizul hakim.I am a student.I am feeling good today";
-$to_change=array('Azizul','am','I');
-$change=array('Shafiq and Habib','are','We');
-
-$new_string1=str_replace($to_change,$change,$string2);
-echo $new_string1;
-/*Output:We are Shafiq and Habib hakim.We are a student.We are feeling good today*/
+}
+?>
+<hr>
+<form action="index.php" method="POST">
+    <textarea name="user_input" rows="6" cols="30"><?php echo  $user_input ?></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
