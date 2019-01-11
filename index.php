@@ -1,11 +1,27 @@
 
 <?php
 //find and replace application
-if(isset($_POST["user_input"]) && !empty($_POST["user_input"]))
+$offset=0;
+if(isset($_POST['user_input']) && isset($_POST['searchfor'])&&isset($_POST['replacewith']))
 {
-    echo $text=$_POST["user_input"];
-    echo $find=$_POST["searchfor"];
-    echo $replace=$_POST["replacewith"];
+    $text=$_POST['user_input'];
+    $search=$_POST['searchfor'];
+    $replace=$_POST['replacewith'];
+    $search_length=strlen($search);
+    if(!empty($text)&& !empty($search)&& !empty($replace))
+    {
+        while($strpos=strpos($text,$search,$offset))
+        {
+
+            $offset=$strpos+$search_length;
+           echo $text=substr_replace($text,$replace,$strpos,$search_length);
+
+        }
+        echo $text;
+    }
+    else{
+        echo "Please input all the field";
+    }
 }
 
 ?>
