@@ -1,5 +1,8 @@
 <?php
-//timestamps+strtotime
-$time=time();
-$date=date('d/m/y @h:i:s',strtotime('+2 years'));
-echo 'the actual date is'.$date;
+//random number generation
+echo rand(1,6);
+?>
+<form action=index.php" method="POST">
+    <input type="submit" name="roll" value="Roll dice">
+</form>
+
