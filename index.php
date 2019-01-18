@@ -1,5 +1,13 @@
+<?php ob_start();?>
+    <h1>My page</h1>
+    This is my page
 <?php
-//using the header page to force page redirect
-$reference_page='https://www.youtube.com/';
+//ob_start and ob_end_flush function
+$reference_page='https://www.youtube.com';
 $reference=true;
-header('Location:'.$reference_page);
+if($reference==true)
+{
+    header('Location:'.$reference_page);
+}
+ob_end_flush();
+?>
