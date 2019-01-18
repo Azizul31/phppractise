@@ -1,7 +1,5 @@
 <?php
-//server variables and script name
-include 'header.inc.php';
-if(isset($_POST['submit']))
-{
-    echo "Process 1";
-}
+//using the header to force page redirect
+$reference_page='https://www.youtube.com/';
+$reference=true;
+header('Location:'.$reference_page);
