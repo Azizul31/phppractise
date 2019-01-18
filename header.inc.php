@@ -1,11 +1,7 @@
-<h1>Azizul Hakim Chowdhury</h1>
 <?php
-/**
- * Created by PhpStorm.
- * User: Azizul56
- * Date: 12/30/2018
- * Time: 3:19 AM
- */
-
-$var1="chicken";
-$var2="Cricket";
+//server variables for script name(2)
+$server_name=$_SERVER['SCRIPT_NAME'];
+?>
+<form action="<?php echo $server_name; ?>"  method= "POST" >
+    <input type="submit" name="submit" value="Submit">
+</form>
