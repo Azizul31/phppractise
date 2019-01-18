@@ -1,14 +1,18 @@
 <?php
-require "conf.inc.php";
-foreach ($ip_address_blocked as $ip) {
-    {
-        if ($ip == $ip_address) {
-            die ('The ip address ' . $ip_address . ' has been blocked');
-        }
-    }
+//better way to get visitor's ip
+$http_client_ip=$_SERVER["HTTP_CLIENT_IP"];
+$http_x_forwarded_for=$_SERVER["HTTP_X_FORWARDED_FOR"];
+$remote_addr=$_SERVER["REMOTE_ADDR"];
+if(!empty($http_client_ip))
+{
+    $ip_address=$http_client_ip;
 }
-
-
-?>
-<h1>Welcome to Bangladesh</h1>
-
+if(!empty($http_x_forwarded_for))
+{
+    $ip_address=$http_x_forwarded_for;
+}
+if(!empty($remote_addr))
+{
+    $ip_address=$remote_addr;
+}
+echo $ip_address;
