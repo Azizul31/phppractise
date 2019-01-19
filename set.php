@@ -1,5 +1,4 @@
 <?php
-//session
-session_start();
-$_SESSION['username']="azizul";
+//cookies
+setcookie('username','Azizul',time()+30);
 ?>
