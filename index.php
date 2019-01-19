@@ -1,21 +1,21 @@
 <?php
-if((isset($_GET['day']))&& (isset($_GET['month'])) && (isset($_GET['year'])))
+//post method
+$match="pass123";
+if(isset($_POST["password"]))
 {
-    $day=$_GET['day'];
-    $month=$_GET['month'];
-    $year=$_GET['year'];
-    if(!empty($day) && !empty($month) && !empty($year))
+    if(!empty($_POST["password"]))
     {
-        echo "The date is ".$day." /".$month." /".$year." /";
+        $password=$_POST["password"];
+        if($password==$match) {
+            echo "this is correct";
+        }
+        else echo "This is incorrect";
     }
-    else echo "Operation failed";
-}?>
-<form action="index.php" method="GET">
-    Day:<br>
-    <input type="text" name="day"><br>
-    Month:<br>
-    <input type="text" name="month"><br>
-    Year:<br>
-    <input type="text" name="year"><br>
-    <input type="submit" value="Submit"><br>
+
+}
+?>
+<form action="index.php" method="POST">
+    PASSWORD:<br>
+    <input type="password" name="password"><br>
+    <input type="submit" value="Submit">
 </form>
