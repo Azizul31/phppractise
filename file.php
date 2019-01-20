@@ -1,12 +1,5 @@
 <?php
-//opendir and readdir file handling listening files
-$directory="files";
-if($handle=opendir($directory))
-{
-    echo "Looking inside \ ".$directory;
-}
-while($file=readdir($handle))
-{
-    if($file!="..")
-    echo '<a href="'.$directory.'/'.$file.'">'.$file.'</a><br>';
-}
+//random function
+$image="image.jpg";
+$enc=rand(1000,999).md5($image).rand(1000,999);
+echo $enc;
