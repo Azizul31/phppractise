@@ -1,5 +1,5 @@
 <?php
-//htmlentitites for security purpose
+//htmlentitites for security purpose testing in ubuntu
 if((isset($_GET['day'])) && (isset($_GET['month'])) && (isset($_GET['year'])))
 {
     $day=htmlentities($_GET['day']);
