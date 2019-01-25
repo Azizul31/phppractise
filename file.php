@@ -1,14 +1,19 @@
 <?php
-//file_exsists()
-$filename='azizul.txt';
-if(file_exists($filename))
+//file_delete and rename
+/*$delete="filetodelete.txt";
+if(@unlink($delete))
 {
-    echo "File already exsists";
+    echo "file deleted";
 
 }
 else
 {
-    $handle=fopen($filename,'w');
-    fwrite($handle,"Nothing");
-    fclose($handle);
+    echo "file not exsist ";
 }
+*/
+$file="filetorename.txt";
+$rename=rand(1000,9999);
+    if(rename($file,$rename.'txt'))
+    {
+        echo "file renamed";
+    }
